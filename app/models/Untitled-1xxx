@@ -1,0 +1,93 @@
+  select id as '社員番号',
+       sale as'売上'
+       from sales;
+
+
+
+
+create table if not exists sales (
+     id int primary key auto_increment,
+     name varchar(32),
+     sale int,
+     created_at datetime
+    );
+
+
+    insert into sales (name, sale, created_at) values
+       ('hokkaido', 150, '2015-01-01 12:00:00' ),
+       ('tohoku',   200, '2015-02-01 12:00:00' ),
+       ('kanto',    500, '2015-03-01 12:00:00' ),
+       ('chubu',    300, '2015-04-01 12:00:00' ),
+       ('kinki',    400, '2015-05-01 12:00:00' ),
+       ('chugoku',  180, '2015-06-01 12:00:00' ),
+       ('shikoku',  140, '2015-07-01 12:00:00' ),
+       ('kyushu',   120, '2015-08-01 12:00:00' );
+
+
+       CREATE TABLE categories (
+         id int not null auto_increment,
+         name varchar(255) not null,
+         primary key (id)
+      );
+
+
+      CREATE TABLE posts (
+         id int not null auto_increment,
+         category_id int not null,
+         title varchar(255) not null,
+         body text not null,
+         primary key (id)
+      );
+
+
+ INSERT INTO categories (id, name) VALUES (1, 'diary');
+ INSERT INTO categories (id, name) VALUES (2, 'work');
+ INSERT INTO categories (id, name) VALUES (3, 'hobby');
+ INSERT INTO categories (id, name) VALUES (4, 'other');
+
+
+ INSERT INTO posts (category_id, title, body) VALUES (1, 'diary_title1', ry_body1');
+ INSERT INTO posts (category_id, title, body) VALUES (1, 'diary_title2', ry_body2');
+ INSERT INTO posts (category_id, title, body) VALUES (1, 'diary_title3', ry_body3');
+ INSERT INTO posts (category_id, title, body) VALUES (2, 'work_title1', k_body1');
+ INSERT INTO posts (category_id, title, body) VALUES (2, 'work_title2', k_body2');
+ INSERT INTO posts (category_id, title, body) VALUES (3, 'hobby_title1', by_body1');
+
+
+ INSERT INTO posts (category_id, title, body) VALUES (1, 'diary_title1', ry_body1');
+ INSERT INTO posts (category_id, title, body) VALUES (1, 'diary_title2', ry_body2');
+ INSERT INTO posts (category_id, title, body) VALUES (1, 'diary_title3', ry_body3');
+ INSERT INTO posts (category_id, title, body) VALUES (2, 'work_title1', k_body1');
+ INSERT INTO posts (category_id, title, body) VALUES (2, 'work_title2', k_body2');
+ INSERT INTO posts (category_id, title, body) VALUES (3, 'hobby_title1', by_body1');
+
+ mysql> INSERT INTO posts (category_id, title, body) VALUES (1, 'diary_title1', 'diary_body1');
+mysql> INSERT INTO posts (category_id, title, body) VALUES (1, 'diary_title2', 'diary_body2');
+mysql> INSERT INTO posts (category_id, title, body) VALUES (1, 'diary_title3', 'diary_body3');
+mysql> INSERT INTO posts (category_id, title, body) VALUES (2, 'work_title1', 'work_body1');
+mysql> INSERT INTO posts (category_id, title, body) VALUES (2, 'work_title2', 'work_body2');
+mysql> INSERT INTO posts (category_id, title, body) VALUES (3, 'hobby_title1', 'hobby_body1');
+
+
+
+create table user_master (
+       id int primary key auto_increment,
+       user_name varchar(255),
+       email varchar(255),
+       reg_date datetime
+     );
+
+     insert into user_master (user_name, email, reg_date) values ('Taro', 'taro@example.com', '2015-01-01')
+
+
+     insert into user_master 
+     (user_name, email, reg_date)
+     values
+     ('Jiro',
+     'Jiro@example.com',
+     '2016-01-01');
+
+
+     insert into user_master(user_name, email, reg_date)
+     values
+     ('Saburo', 'saburo@example.com', '2017-01-01 00:00:00');
