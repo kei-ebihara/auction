@@ -30,3 +30,8 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 /vendor/bundle
+
+
+# モデル名は「item」、「Item」、どちらでも構いません
+# bin/rails generate modelでもOKです
+[app] $ bin/rails g model item name:string description:text price:integer seller:string email:string image_url:text
